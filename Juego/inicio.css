@@ -1,0 +1,172 @@
+/* Importar fuente de Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos del encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative; /* Necesario para la animación */
+}
+
+/* Animación de todos los enlaces del menú */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s ease-in-out, transform 0.2s;
+}
+
+/* Línea animada debajo de cada enlace */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background: #fdd835;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* Efecto de hover: cambio de color, crecimiento y subrayado */
+nav ul li a:hover {
+    color: #fdd835;
+    transform: scale(1.1);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Sección Hero */
+.hero {
+    height: 100vh;
+    background: url('imagenes/nagii.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-image{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hero-image img{
+    width: 45%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0,0,0.0.8)
+
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0.0.8)
+
+}
+
+/* Botón de "Descubre más" con animación */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #fdd835;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn:hover {
+    background: #ffca28;
+    transform: scale(1.1);
+}
+
+/* Sección de Introducción */
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Pie de página */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+}
